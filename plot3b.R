@@ -1,4 +1,4 @@
-plot3b <- function(){
+plot3c <- function(){
      #Read in only data need instead of entire file.
      #setwd("C:/Users/Karen/Desktop/Cousera/R Working Directory")
      data_file<-read.csv2("household_power_consumption.txt",skip = 66637,nrow=2878)
@@ -7,9 +7,9 @@ plot3b <- function(){
      col_tit<-read.csv2("household_power_consumption.txt",nrow=1)
      colnames(data_file)<-colnames(col_tit)
      #Open png device
-     png("plot3b.png")
-     plot(as.numeric(data_file$Voltage),type="l",
-          xlab ="datetime", ylab = "Voltage",
+     png("plot3c.png")
+     plot(as.numeric(data_file$Global_reactive_power),type="l",
+          xlab ="datetime", ylab = "Global_reactive_power",
           xaxt="n",yaxt = "n")
      #Set Up graph criteria.
      axis(side=1, at = c(1,1439,2878),labels = 
