@@ -7,16 +7,16 @@ plot3c <- function(){
      col_tit<-read.csv2("household_power_consumption.txt",nrow=1)
      colnames(data_file)<-colnames(col_tit)
      #Open png device
-     png("plot3c.png")
+     #png("plot3c.png")
      plot(as.numeric(data_file$Voltage),type="l",
-          xlab ="datetime", ylab = "Global_reactive_power",
+          xlab ="datetime", ylab = "Voltage",
           xaxt="n",yaxt = "n")
      #Set Up graph criteria.
      axis(side=1, at = c(1,1439,2878),labels = 
                c("Thur","Fri","Sat"))
      axis(side=2,at =c(0,200,400,600),labels=c(0,2,4,6))
      #Closed graphic device
-     dev.off()
+     #dev.off()
    
      
 }
